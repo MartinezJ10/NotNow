@@ -1,0 +1,28 @@
+.categoryBlock {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+  margin: 0.5rem 1rem;
+  color: var(--text);
+  font-family: var(--reg);
+  .category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--prim);
+    padding: 33% 16%;
+    border-radius: var(--radius);
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 835px) {
+  .categoryBlock {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .categoryBlock {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

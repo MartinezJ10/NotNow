@@ -1,0 +1,56 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 2rem;
+  .form-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    width: 50%;
+    color: var(--text);
+
+    .input {
+      width: 100%;
+      border: none;
+      background-color: var(--input);
+      border-radius: var(--radius);
+      color: var(--text);
+
+      &[type="text"] {
+        padding: 0.4rem;
+      }
+    }
+    textarea {
+      resize: none;
+      padding: 0.4rem;
+      height: 7rem;
+    }
+    select {
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+  }
+  .btn {
+    @include btn(var(--prim));
+  }
+  .sub {
+    align-self: flex-end;
+  }
+}
+.form,
+input,
+select,
+textarea,
+button {
+  font-family: var(--reg);
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 540px) {
+  .form {
+    .form-block {
+      width: 100%;
+    }
+  }
+}

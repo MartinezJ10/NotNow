@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --primRGB: 1, 135, 134;
+  --bg: #ffffff;
+  --navTxt: #ffffff;
+  --text: #000000;
+  --card: var(--bg);
+  --prim: rgb(var(--primRGB));
+  --danger: rgb(221, 109, 109);
+  --shadow: rgba(var(--primRGB), 0.4);
+  --input: rgba(var(--primRGB), 0.25);
+  --box-shadow: 10px 1rem 2rem var(--shadow);
+  --radius: 0.4rem;
+  --reg: "Poppins", sans-serif;
+  --trans: 0.4s;
+  --slider: #ccc;
+  --sliderNight: rgb(3, 42, 73);
+}
+
+[data-theme="dark"] {
+  --primRGB: 1, 135, 134;
+  --cardRGB: 37, 38, 44;
+  --card: rgb(var(--cardRGB));
+  --input: rgb(var(--cardRGB));
+  --danger: rgb(207, 102, 121);
+  --box-shadow: none;
+  --bg: #15131e;
+  --text: #fefefe;
+}
+
+@mixin btn($prim) {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  background-color: var(--prim);
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  color: var(--bg);
+  transition: var(--trans);
+  &:hover {
+    border: 1px solid var(--prim);
+    color: var(--prim);
+    background-color: var(--bg);
+  }
+}
+input,
+button,
+select,
+textarea:focus {
+  outline: none;
+}
+/*
+@font-face {
+  font-family: "Space_Mono_Reg";
+  src: url("/src/styles/fonts/SpaceMono-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Space_Mono_Bold";
+  src: url("/src/styles/fonts/SpaceMono-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+.app-background {
+  background-color: var(--bg);
+}

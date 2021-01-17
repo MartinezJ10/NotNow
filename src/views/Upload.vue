@@ -1,22 +1,23 @@
 <template>
   <Nav />
-  <ListCategory />
+  <Form />
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue";
 
+const Form = defineAsyncComponent(() =>
+  import("@/components/Form" /* webpackChunkName: "Form" */)
+);
 const Nav = defineAsyncComponent(() =>
   import("@/components/Nav" /* webpackChunkName: "Nav" */)
 );
-const ListCategory = defineAsyncComponent(() =>
-  import("@/components/ListCategory" /* webpackChunkName: "ListCategory" */)
-);
+
 export default {
-  name: "Home",
+  name: "Upload",
   components: {
     Nav,
-    ListCategory,
+    Form,
   },
 };
 </script>

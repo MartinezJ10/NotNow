@@ -1,22 +1,21 @@
 <template>
   <Nav />
-  <ListCategory />
+  <CardFiltered />
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue";
 
+const CardFiltered = defineAsyncComponent(() =>
+  import("@/components/CardFiltered" /* webpackChunkName: "CardFiltered" */)
+);
 const Nav = defineAsyncComponent(() =>
   import("@/components/Nav" /* webpackChunkName: "Nav" */)
 );
-const ListCategory = defineAsyncComponent(() =>
-  import("@/components/ListCategory" /* webpackChunkName: "ListCategory" */)
-);
 export default {
-  name: "Home",
   components: {
+    CardFiltered,
     Nav,
-    ListCategory,
   },
 };
 </script>
